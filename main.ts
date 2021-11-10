@@ -10,5 +10,26 @@ input.onButtonPressed(Button.A, function () {
         basic.showArrow(ArrowNames.West)
     }
 })
+input.onButtonPressed(Button.B, function () {
+    True_or_False = randint(1, 2)
+    if (True_or_False == 1) {
+        basic.showLeds(`
+            # # # # #
+            # . . . .
+            # # # # #
+            . . . . #
+            # # # # #
+            `)
+    } else if (True_or_False == 2) {
+        basic.showLeds(`
+            . # # # .
+            . # . . .
+            . # # # .
+            . # . . .
+            . # . . .
+            `)
+    }
+})
+let True_or_False = 0
 let Number2 = 0
 basic.clearScreen()
